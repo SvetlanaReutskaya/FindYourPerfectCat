@@ -99,12 +99,12 @@
 		DAB57BB4246FFE500003F6EA /* FindYourPerfectCat */ = {
 			isa = PBXGroup;
 			children = (
+				DAB57BE7246FFF8A0003F6EA /* Models */,
+				DAB57BE6246FFF670003F6EA /* Controllers */,
+				DAB57BE5246FFF580003F6EA /* Views */,
 				DAB57BB5246FFE500003F6EA /* AppDelegate.swift */,
 				DAB57BB7246FFE500003F6EA /* SceneDelegate.swift */,
-				DAB57BB9246FFE500003F6EA /* ViewController.swift */,
-				DAB57BBB246FFE500003F6EA /* Main.storyboard */,
 				DAB57BBE246FFE530003F6EA /* Assets.xcassets */,
-				DAB57BC0246FFE530003F6EA /* LaunchScreen.storyboard */,
 				DAB57BC3246FFE530003F6EA /* Info.plist */,
 			);
 			path = FindYourPerfectCat;
@@ -126,6 +126,30 @@
 				DAB57BD9246FFE530003F6EA /* Info.plist */,
 			);
 			path = FindYourPerfectCatUITests;
+			sourceTree = "<group>";
+		};
+		DAB57BE5246FFF580003F6EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAB57BBB246FFE500003F6EA /* Main.storyboard */,
+				DAB57BC0246FFE530003F6EA /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAB57BE6246FFF670003F6EA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DAB57BB9246FFE500003F6EA /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DAB57BE7246FFF8A0003F6EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
