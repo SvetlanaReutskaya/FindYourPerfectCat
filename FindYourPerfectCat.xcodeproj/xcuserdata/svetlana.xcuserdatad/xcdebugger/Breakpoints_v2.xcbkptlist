@@ -68,5 +68,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EDA18415-00CC-4E87-AFE0-7DC687B2C860"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FindYourPerfectCat/Controllers/CatBreedsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "downloadJSONBreeds(completed:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EDA18415-00CC-4E87-AFE0-7DC687B2C860 - 5002ae6ddf6dabe8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FindYourPerfectCat.CatBreedsViewController.downloadJSONBreeds(completed: () -&gt; ()) -&gt; ()"
+                  moduleName = "FindYourPerfectCat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/svetlana/Documents/FindYourPerfectCat/FindYourPerfectCat/Controllers/CatBreedsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "875">
+               </Location>
+               <Location
+                  uuid = "EDA18415-00CC-4E87-AFE0-7DC687B2C860 - e47799f4565a8d54"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FindYourPerfectCat.CatBreedsViewController.downloadJSONBreeds(completed: () -&gt; ()) -&gt; ()"
+                  moduleName = "FindYourPerfectCat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/svetlana/Documents/FindYourPerfectCat/FindYourPerfectCat/Controllers/CatBreedsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -15,10 +15,9 @@ struct Breed: Decodable {
     var origin: String
     var description: String
     var life_span: String
-    var alt_names: String
     
     var indoor: Int
-    var adaplability: Int
+    var adaptability: Int
     var child_friendly: Int
     var dog_friendly: Int
     var energy_level: Int
