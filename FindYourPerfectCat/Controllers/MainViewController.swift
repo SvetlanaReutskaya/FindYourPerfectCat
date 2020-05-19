@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     }
     
     
-    @IBAction func openBreeds(_ sender: Any) {
+    @IBAction func openList(_ sender: Any) {
         let sb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newController = sb.instantiateViewController(identifier: "BreedsVC") as! CatBreedsViewController
         self.present(newController, animated: true, completion: nil)

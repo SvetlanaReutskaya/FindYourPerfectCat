@@ -24,9 +24,19 @@ class CatBreedsViewController: UIViewController, UITableViewDelegate, UITableVie
         let curBreed = breeds[indexPath.row]
         
         cell.textLabel?.text = curBreed.name
-        cell.detailTextLabel?.text = curBreed.description
+        cell.detailTextLabel?.text = curBreed.temperament
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? BreedInfoViewController{
+            destination.breed = self.breeds[tableView.indexPathForSelectedRow?.row ?? 0]
+        }
     }
     
 
