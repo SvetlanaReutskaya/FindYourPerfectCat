@@ -121,13 +121,6 @@
                                 <rect key="frame" x="20" y="48" width="374" height="212"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPF-E9-TB0">
-                                <rect key="frame" x="20" y="268" width="374" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lLi-cR-b0G">
                                 <rect key="frame" x="20" y="326" width="374" height="469"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
@@ -145,7 +138,6 @@
                     <connections>
                         <outlet property="breedPhoto" destination="AAz-ML-4o6" id="sPJ-Up-oEi"/>
                         <outlet property="breedText" destination="lLi-cR-b0G" id="Dlo-hf-DRN"/>
-                        <outlet property="breedTitle" destination="rPF-E9-TB0" id="eKj-AY-qHN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VCu-qA-vIp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

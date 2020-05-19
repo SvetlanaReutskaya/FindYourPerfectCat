@@ -50,10 +50,10 @@ class CatBreedsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func downloadJSONBreeds(completed: @escaping() -> ()){
-        let url = NSURL(string: "https://api.thecatapi.com/v1/breeds")
+        let url = NSURL(string: CatApiResources.init().getBreeds)
         
         var request = URLRequest(url: url! as URL)
-        request.addValue("2129fafd-26c9-4517-abe3-2ee5a4cfb3f9", forHTTPHeaderField: "x-api-key")
+        request.addValue(CatApiResources.init().apiKey, forHTTPHeaderField: "x-api-key")
         request.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: request){(data, response, error) in

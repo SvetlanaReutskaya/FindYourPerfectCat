@@ -12,21 +12,27 @@ struct Breed: Decodable {
     var id: String
     var name: String
     var temperament: String
-    var origin: String
     var description: String
     var life_span: String
     
-    var indoor: Int
-    var adaptability: Int
     var child_friendly: Int
     var dog_friendly: Int
     var energy_level: Int
-    var grooming: Int
-    var health_issues: Int
     var intelligence: Int
-    var vocalisation: Int
-    var hairless: Int
-    var suppressed_tail: Int
-    var short_legs: Int
     var hypoallergenic: Int
+    
+    public func breedInfo()->String{
+        var result = "";
+        
+        result += temperament != "" ? "Temperament: " + temperament + "\n\n" : ""
+        result += description != "" ? "Description: " + description + "\n\n" : ""
+        result += "Character traits:\n"
+        result += child_friendly > 3 ? "☑️ Child-friendly \n" : ""
+        result += dog_friendly > 3 ? "☑️ Dog-friendly \n" : ""
+        result += energy_level > 3 ? "☑️ Energetic \n" : ""
+        result += intelligence > 3 ? "☑️ Intelligent \n" : ""
+        result += hypoallergenic > 3 ? "☑️ Hypoallergenic \n" : ""
+        
+        return result;
+    }
 }

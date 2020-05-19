@@ -19,6 +19,8 @@
 		DAB57BF524714D850003F6EA /* BreedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57BF424714D850003F6EA /* BreedInfoViewController.swift */; };
 		DAB57BF7247171AA0003F6EA /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57BF6247171AA0003F6EA /* Breed.swift */; };
 		DAB57BF9247310670003F6EA /* BreedImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57BF8247310670003F6EA /* BreedImg.swift */; };
+		DAB57BFC2474168A0003F6EA /* BreedInfoExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57BFB2474168A0003F6EA /* BreedInfoExtention.swift */; };
+		DAB57BFF2474173E0003F6EA /* UrlResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57BFE2474173E0003F6EA /* UrlResources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		DAB57BF424714D850003F6EA /* BreedInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInfoViewController.swift; sourceTree = "<group>"; };
 		DAB57BF6247171AA0003F6EA /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		DAB57BF8247310670003F6EA /* BreedImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImg.swift; sourceTree = "<group>"; };
+		DAB57BFB2474168A0003F6EA /* BreedInfoExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInfoExtention.swift; sourceTree = "<group>"; };
+		DAB57BFE2474173E0003F6EA /* UrlResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlResources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 		DAB57BB4246FFE500003F6EA /* FindYourPerfectCat */ = {
 			isa = PBXGroup;
 			children = (
+				DAB57BFD2474171A0003F6EA /* Resources */,
+				DAB57BFA2474164F0003F6EA /* Extentions */,
 				DAB57BE7246FFF8A0003F6EA /* Models */,
 				DAB57BE6246FFF670003F6EA /* Controllers */,
 				DAB57BE5246FFF580003F6EA /* Views */,
@@ -162,6 +168,22 @@
 				DAB57BF8247310670003F6EA /* BreedImg.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DAB57BFA2474164F0003F6EA /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				DAB57BFB2474168A0003F6EA /* BreedInfoExtention.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		DAB57BFD2474171A0003F6EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DAB57BFE2474173E0003F6EA /* UrlResources.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +324,8 @@
 				DAB57BF524714D850003F6EA /* BreedInfoViewController.swift in Sources */,
 				DAB57BF9247310670003F6EA /* BreedImg.swift in Sources */,
 				DAB57BF124705D280003F6EA /* MainViewController.swift in Sources */,
+				DAB57BFF2474173E0003F6EA /* UrlResources.swift in Sources */,
+				DAB57BFC2474168A0003F6EA /* BreedInfoExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
