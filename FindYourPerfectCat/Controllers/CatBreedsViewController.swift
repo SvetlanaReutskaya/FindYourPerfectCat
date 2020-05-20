@@ -12,9 +12,7 @@ class CatBreedsViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var breeds = [Breed]()
     var limit = 15
-    
-    
-    
+        
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,18 +29,12 @@ class CatBreedsViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDetails", sender: self)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BreedInfoViewController{
             destination.breed = self.breeds[tableView.indexPathForSelectedRow?.row ?? 0]
         }
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadJSONBreeds{
@@ -53,8 +45,6 @@ class CatBreedsViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
-    
-    
     func downloadJSONBreeds(completed: @escaping() -> ()){
         let url = NSURL(string: CatApiResources.init().getBreeds)
         
@@ -63,7 +53,7 @@ class CatBreedsViewController: UIViewController, UITableViewDelegate, UITableVie
         request.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: request){(data, response, error) in
-            if(error==nil){
+            if error == nil {
                 do{
                     self.breeds = try JSONDecoder().decode([Breed].self, from: data!)
                     DispatchQueue.main.async {

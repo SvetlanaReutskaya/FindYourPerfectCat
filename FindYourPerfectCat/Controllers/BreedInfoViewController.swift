@@ -13,9 +13,7 @@ import UIKit
 class BreedInfoViewController: UIViewController {
 
     @IBOutlet weak var breedPhoto: UIImageView!
-    
     @IBOutlet weak var breedText: UITextView!
-    
     
     var breed: Breed?
     var breedImg: BreedImg?
@@ -23,9 +21,10 @@ class BreedInfoViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
         breedText.text = breed?.breedInfo()
         breedText.isEditable = false
+        title = breed?.name
+        
         downloadJSONImage{
             self.breedPhoto.downloaded(from: self.breedImg!.url)
         }
