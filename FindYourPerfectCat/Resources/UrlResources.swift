@@ -12,6 +12,6 @@ class CatApiResources{
     
     let getBreeds: String = "https://api.thecatapi.com/v1/breeds"
     let getBreedImg: String = "https://api.thecatapi.com/v1/images/search?breed_id="
-    
     let apiKey: String = "2129fafd-26c9-4517-abe3-2ee5a4cfb3f9"
 }
+

@@ -10,10 +10,11 @@ import UIKit
 
 
 
-class BreedInfoViewController: UIViewController {
+class BreedViewController: UIViewController {
 
     @IBOutlet weak var breedPhoto: UIImageView!
     @IBOutlet weak var breedText: UITextView!
+    
     
     var breed: Breed?
     var breedImg: BreedImg?
@@ -30,6 +31,7 @@ class BreedInfoViewController: UIViewController {
         }
 
     }
+    
     
     func downloadJSONImage(completed: @escaping() -> ()){
         let url = NSURL(string: CatApiResources.init().getBreedImg + breed!.id)

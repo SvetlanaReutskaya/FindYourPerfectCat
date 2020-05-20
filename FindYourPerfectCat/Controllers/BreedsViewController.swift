@@ -8,11 +8,10 @@
 
 import UIKit
 
-class CatBreedsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BreedsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var breeds = [Breed]()
-    var limit = 15
-        
+    
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,23 +19,25 @@ class CatBreedsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "breedCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as! BreedViewCell
         let curBreed = breeds[indexPath.row]
         
-        cell.textLabel?.text = curBreed.name
-        cell.detailTextLabel?.text = curBreed.temperament
+        cell.breedName.text = curBreed.name
+        cell.breedDescription.text = curBreed.temperament
+        cell.breedDescription.isEditable = false
         
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? BreedInfoViewController{
+        if let destination = segue.destination as? BreedViewController{
             destination.breed = self.breeds[tableView.indexPathForSelectedRow?.row ?? 0]
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         downloadJSONBreeds{
             self.tableView.reloadData()
         }
@@ -44,6 +45,7 @@ class CatBreedsViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tableView.dataSource = self
         
     }
+    
     
     func downloadJSONBreeds(completed: @escaping() -> ()){
         let url = NSURL(string: CatApiResources.init().getBreeds)
