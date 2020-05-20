@@ -31,7 +31,7 @@ struct Breed: Decodable {
         result += dog_friendly > 3 ? "☑️ Dog-friendly \n" : ""
         result += energy_level > 3 ? "☑️ Energetic \n" : ""
         result += intelligence > 3 ? "☑️ Intelligent \n" : ""
-        result += hypoallergenic > 3 ? "☑️ Hypoallergenic \n" : ""
+        result += hypoallergenic == 1 ? "☑️ Hypoallergenic \n" : ""
         
         return result;
     }

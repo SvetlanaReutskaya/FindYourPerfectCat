@@ -11,6 +11,8 @@ import UIKit
 class CatBreedsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var breeds = [Breed]()
+    var limit = 15
+    
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -28,6 +30,7 @@ class CatBreedsViewController: UIViewController, UITableViewDelegate, UITableVie
         
         return cell
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showDetails", sender: self)
@@ -47,7 +50,10 @@ class CatBreedsViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
     }
+    
+    
     
     func downloadJSONBreeds(completed: @escaping() -> ()){
         let url = NSURL(string: CatApiResources.init().getBreeds)

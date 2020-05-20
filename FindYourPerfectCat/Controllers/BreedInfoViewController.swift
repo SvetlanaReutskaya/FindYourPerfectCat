@@ -21,12 +21,15 @@ class BreedInfoViewController: UIViewController {
     var breedImg: BreedImg?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        
         breedText.text = breed?.breedInfo()
+        breedText.isEditable = false
         downloadJSONImage{
             self.breedPhoto.downloaded(from: self.breedImg!.url)
         }
+
     }
     
     func downloadJSONImage(completed: @escaping() -> ()){
