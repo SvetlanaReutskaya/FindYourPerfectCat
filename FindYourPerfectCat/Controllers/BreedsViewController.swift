@@ -8,30 +8,49 @@
 
 import UIKit
 
+
+
 class BreedsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var breeds = [Breed]()
+    var searchBreeds = [Breed]()
+    var searching = false
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return breeds.count
+        if searching {
+            return searchBreeds.count
+        } else {
+            return breeds.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as! BreedViewCell
-        let curBreed = breeds[indexPath.row]
         
-        cell.breedName.text = curBreed.name
-        cell.breedDescription.text = curBreed.temperament
-        cell.breedDescription.isEditable = false
+        if searching {
+            cell.breedName.text = searchBreeds[indexPath.row].name
+            cell.breedDescription.text = searchBreeds[indexPath.row].temperament
+            cell.breedDescription.isEditable = false
+        }
+        else {
+            cell.breedName.text = breeds[indexPath.row].name
+            cell.breedDescription.text = breeds[indexPath.row].temperament
+            cell.breedDescription.isEditable = false
+        }
         
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BreedViewController{
-            destination.breed = self.breeds[tableView.indexPathForSelectedRow?.row ?? 0]
+            if searching {
+                destination.breed = self.searchBreeds[tableView.indexPathForSelectedRow?.row ?? 0]
+            } else {
+                destination.breed = self.breeds[tableView.indexPathForSelectedRow?.row ?? 0]
+            }
         }
     }
     
