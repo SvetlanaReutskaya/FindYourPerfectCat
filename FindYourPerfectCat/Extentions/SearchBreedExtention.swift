@@ -20,7 +20,6 @@ extension BreedsViewController: UISearchBarDelegate{
                 searchBreeds = breeds.filter({$0.temperament.contains(str)})
             }
         }
-        
         searching = true
         tableView.reloadData()
     }
@@ -30,4 +29,16 @@ extension BreedsViewController: UISearchBarDelegate{
         searchBar.text = ""
         tableView.reloadData()
     }
+}
+
+extension UIViewController {
+    func hideNavigationBar(animated: Bool){
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+
+    }
+
+    func showNavigationBar(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
 }

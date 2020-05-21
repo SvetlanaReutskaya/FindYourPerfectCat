@@ -14,11 +14,36 @@ class BreedsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var breeds = [Breed]()
     var searchBreeds = [Breed]()
+    
     var searching = false
+    var favourite = false
+    let defaults = UserDefaults.standard
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+       
+        downloadJSONBreeds{
+            self.tableView.reloadData()
+        }
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hideNavigationBar(animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        showNavigationBar(animated: animated)
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching {
             return searchBreeds.count
@@ -48,23 +73,12 @@ class BreedsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if let destination = segue.destination as? BreedViewController{
             if searching {
                 destination.breed = self.searchBreeds[tableView.indexPathForSelectedRow?.row ?? 0]
-            } else {
+            }
+            else {
                 destination.breed = self.breeds[tableView.indexPathForSelectedRow?.row ?? 0]
             }
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        downloadJSONBreeds{
-            self.tableView.reloadData()
-        }
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        
-    }
-    
     
     func downloadJSONBreeds(completed: @escaping() -> ()){
         let url = NSURL(string: CatApiResources.init().getBreeds)
