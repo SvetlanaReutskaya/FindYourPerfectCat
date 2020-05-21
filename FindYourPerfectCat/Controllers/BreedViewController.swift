@@ -10,26 +10,36 @@ import UIKit
 
 
 
-class BreedViewController: UIViewController {
+class BreedViewController: UIViewController, UIScrollViewDelegate {
 
-    @IBOutlet weak var breedPhoto: UIImageView!
     @IBOutlet weak var breedText: UITextView!
-    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var characterTraits: UITextView!
     
     var breed: Breed?
-    var breedImg: BreedImg?
+    var breedImages = [BreedImg]()
+    var frame = CGRect(x:0, y:0, width:0, height:0)
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        breedText.text = breed?.breedInfo()
+        breedText.text = breed?.description
+        characterTraits.text = breed?.breedInfo()
         breedText.isEditable = false
         title = breed?.name
         
         downloadJSONImage{
-            self.breedPhoto.downloaded(from: self.breedImg!.url)
+            for index in 0..<self.breedImages.count {
+                self.frame.origin.x = self.scrollView.frame.size.width * CGFloat(index)
+                self.frame.size = self.scrollView.frame.size
+                
+                let imgView = UIImageView(frame: self.frame)
+                imgView.downloaded(from: self.breedImages[index].url)
+                self.scrollView.addSubview(imgView)
+            }
+            self.scrollView.contentSize = CGSize(width: self.scrollView.frame.size.width * CGFloat(self.breedImages.count), height: self.scrollView.frame.size.height)
+            self.scrollView.delegate = self
         }
-
     }
     
     
@@ -43,7 +53,7 @@ class BreedViewController: UIViewController {
         URLSession.shared.dataTask(with: request){(data, response, error) in
             if(error==nil){
                 do{
-                    self.breedImg = try JSONDecoder().decode([BreedImg].self, from: data!)[0]
+                    self.breedImages = try JSONDecoder().decode([BreedImg].self, from: data!)
                     DispatchQueue.main.async {
                         completed()
                     }
