@@ -52,9 +52,12 @@ class BreedViewController: UIViewController, UIScrollViewDelegate {
         if savedBreeds.contains(breed!.id) {
             likeBtn.setImage(UIImage(named: "noLike"), for: .normal)
             savedBreeds.removeAll { $0 == breed!.id }
+            defaults.removeObject(forKey: breed!.id)
+            
         } else {
             likeBtn.setImage(UIImage(named: "like"), for: .normal)
             savedBreeds.append(breed!.id)
+            defaults.set(breedImages[0].url, forKey: breed!.id)
         }
         defaults.set(savedBreeds, forKey: "likedBreeds")
     }

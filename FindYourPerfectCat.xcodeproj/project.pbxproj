@@ -22,6 +22,8 @@
 		DAB57C07247590E60003F6EA /* BreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57C06247590E60003F6EA /* BreedsViewController.swift */; };
 		DAB57C09247595030003F6EA /* BreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57C08247595030003F6EA /* BreedViewController.swift */; };
 		DAB57C0B24767E6E0003F6EA /* SearchBreedExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57C0A24767E6E0003F6EA /* SearchBreedExtention.swift */; };
+		DAB57C112477DFB10003F6EA /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57C102477DFB10003F6EA /* FavouritesViewController.swift */; };
+		DAB57C17247811A00003F6EA /* FavViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57C16247811A00003F6EA /* FavViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		DAB57C06247590E60003F6EA /* BreedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewController.swift; sourceTree = "<group>"; };
 		DAB57C08247595030003F6EA /* BreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewController.swift; sourceTree = "<group>"; };
 		DAB57C0A24767E6E0003F6EA /* SearchBreedExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBreedExtention.swift; sourceTree = "<group>"; };
+		DAB57C102477DFB10003F6EA /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		DAB57C16247811A00003F6EA /* FavViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 			children = (
 				DAB57C06247590E60003F6EA /* BreedsViewController.swift */,
 				DAB57C08247595030003F6EA /* BreedViewController.swift */,
+				DAB57C102477DFB10003F6EA /* FavouritesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				DAB57BF6247171AA0003F6EA /* Breed.swift */,
 				DAB57BF8247310670003F6EA /* BreedImg.swift */,
 				DAB57C0424757D7C0003F6EA /* BreedViewCell.swift */,
+				DAB57C16247811A00003F6EA /* FavViewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,9 +326,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB57C17247811A00003F6EA /* FavViewCell.swift in Sources */,
 				DAB57C0524757D7C0003F6EA /* BreedViewCell.swift in Sources */,
 				DAB57BF7247171AA0003F6EA /* Breed.swift in Sources */,
 				DAB57BB6246FFE500003F6EA /* AppDelegate.swift in Sources */,
+				DAB57C112477DFB10003F6EA /* FavouritesViewController.swift in Sources */,
 				DAB57C0B24767E6E0003F6EA /* SearchBreedExtention.swift in Sources */,
 				DAB57BB8246FFE500003F6EA /* SceneDelegate.swift in Sources */,
 				DAB57C09247595030003F6EA /* BreedViewController.swift in Sources */,
