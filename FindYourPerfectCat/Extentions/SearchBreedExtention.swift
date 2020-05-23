@@ -12,14 +12,17 @@ import UIKit
 extension BreedsViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        var searchArray = [Breed]()
         let searchT = searchText.trimmingCharacters(in: .whitespaces)
         searchT.split(separator: ",").forEach { str in
-            if searching {
-                searchBreeds = searchBreeds.filter({$0.temperament.lowercased().contains(str.lowercased())})
+            if searchArray.count == 0 {
+                searchArray = breeds.filter({$0.temperament.lowercased().contains(str.lowercased())})
             } else {
-                searchBreeds = breeds.filter({$0.temperament.contains(str)})
+                searchArray = searchArray.filter({$0.temperament.lowercased().contains(str.lowercased())})
             }
         }
+        searchBreeds = searchArray
+        
         searching = true
         tableView.reloadData()
     }

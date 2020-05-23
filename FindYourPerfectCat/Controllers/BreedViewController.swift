@@ -26,12 +26,8 @@ class BreedViewController: UIViewController, UIScrollViewDelegate {
         
         super.viewDidLoad()
         
-        let savedBreeds = defaults.object(forKey: "likedBreeds") as? [String] ?? [String]()
-        if savedBreeds.contains(breed!.id) {
-            likeBtn.setImage(UIImage(named: "like"), for: .normal)
-        } else {
-            likeBtn.setImage(UIImage(named: "noLike"), for: .normal)
-        }
+        setLike()
+        
         breedText.text = breed?.description
         characterTraits.text = breed?.breedInfo()
         breedText.isEditable = false
@@ -44,10 +40,6 @@ class BreedViewController: UIViewController, UIScrollViewDelegate {
     
     
     @IBAction func handleLike(_ sender: Any) {
-        setLike()
-    }
-    
-    func setLike(){
         var savedBreeds = defaults.object(forKey: "likedBreeds") as? [String] ?? [String]()
         if savedBreeds.contains(breed!.id) {
             likeBtn.setImage(UIImage(named: "noLike"), for: .normal)
@@ -60,6 +52,15 @@ class BreedViewController: UIViewController, UIScrollViewDelegate {
             defaults.set(breedImages[0].url, forKey: breed!.id)
         }
         defaults.set(savedBreeds, forKey: "likedBreeds")
+    }
+    
+    func setLike(){
+        let savedBreeds = defaults.object(forKey: "likedBreeds") as? [String] ?? [String]()
+        if savedBreeds.contains(breed!.id) {
+            likeBtn.setImage(UIImage(named: "like"), for: .normal)
+        } else {
+            likeBtn.setImage(UIImage(named: "noLike"), for: .normal)
+        }
     }
     
     func setGallery(){

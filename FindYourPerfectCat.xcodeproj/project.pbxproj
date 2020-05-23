@@ -16,7 +16,7 @@
 		DAB57BD8246FFE530003F6EA /* FindYourPerfectCatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57BD7246FFE530003F6EA /* FindYourPerfectCatUITests.swift */; };
 		DAB57BF7247171AA0003F6EA /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57BF6247171AA0003F6EA /* Breed.swift */; };
 		DAB57BF9247310670003F6EA /* BreedImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57BF8247310670003F6EA /* BreedImg.swift */; };
-		DAB57BFC2474168A0003F6EA /* BreedInfoExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57BFB2474168A0003F6EA /* BreedInfoExtention.swift */; };
+		DAB57BFC2474168A0003F6EA /* ImageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57BFB2474168A0003F6EA /* ImageExtention.swift */; };
 		DAB57BFF2474173E0003F6EA /* UrlResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57BFE2474173E0003F6EA /* UrlResources.swift */; };
 		DAB57C0524757D7C0003F6EA /* BreedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57C0424757D7C0003F6EA /* BreedViewCell.swift */; };
 		DAB57C07247590E60003F6EA /* BreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB57C06247590E60003F6EA /* BreedsViewController.swift */; };
@@ -59,7 +59,7 @@
 		DAB57BD9246FFE530003F6EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAB57BF6247171AA0003F6EA /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		DAB57BF8247310670003F6EA /* BreedImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImg.swift; sourceTree = "<group>"; };
-		DAB57BFB2474168A0003F6EA /* BreedInfoExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInfoExtention.swift; sourceTree = "<group>"; };
+		DAB57BFB2474168A0003F6EA /* ImageExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtention.swift; sourceTree = "<group>"; };
 		DAB57BFE2474173E0003F6EA /* UrlResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlResources.swift; sourceTree = "<group>"; };
 		DAB57C0424757D7C0003F6EA /* BreedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewCell.swift; sourceTree = "<group>"; };
 		DAB57C06247590E60003F6EA /* BreedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewController.swift; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 		DAB57BFA2474164F0003F6EA /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				DAB57BFB2474168A0003F6EA /* BreedInfoExtention.swift */,
+				DAB57BFB2474168A0003F6EA /* ImageExtention.swift */,
 				DAB57C0A24767E6E0003F6EA /* SearchBreedExtention.swift */,
 			);
 			path = Extentions;
@@ -337,7 +337,7 @@
 				DAB57C07247590E60003F6EA /* BreedsViewController.swift in Sources */,
 				DAB57BF9247310670003F6EA /* BreedImg.swift in Sources */,
 				DAB57BFF2474173E0003F6EA /* UrlResources.swift in Sources */,
-				DAB57BFC2474168A0003F6EA /* BreedInfoExtention.swift in Sources */,
+				DAB57BFC2474168A0003F6EA /* ImageExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

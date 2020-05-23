@@ -16,29 +16,19 @@ class BreedsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var searchBreeds = [Breed]()
     
     var searching = false
-    var favourite = false
     let defaults = UserDefaults.standard
     
-    @IBOutlet weak var favouritesBtn: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let savedBreeds = defaults.object(forKey: "likedBreeds") as? [String] ?? [String]()
-        if savedBreeds.count > 0 {
-            favouritesBtn.setImage(UIImage(named: "favourites"), for: .normal)
-        } else {
-            favouritesBtn.setImage(UIImage(named: "emptyFavourites"), for: .normal)
-        }
        
         downloadJSONBreeds{
             self.tableView.reloadData()
         }
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

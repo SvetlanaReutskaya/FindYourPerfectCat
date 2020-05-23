@@ -10,6 +10,18 @@ import UIKit
 
 class FavouritesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var breedIds  = [String]()
+    var breeds  = [Breed]()
+    let defaults = UserDefaults.standard
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         breedIds.count
     }
@@ -25,22 +37,9 @@ class FavouritesViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.breedName.text = breed.name
         cell.breedInfo.text = breed.description
         cell.breedInfo.isEditable = false
-        if (breedImg != nil) {
+        if breedImg != nil {
             cell.breedImg.downloaded(from: breedImg!)
         }
         return cell
     }
-    
-    var breedIds  = [String]()
-    var breeds  = [Breed]()
-    let defaults = UserDefaults.standard
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-    }
-    
 }

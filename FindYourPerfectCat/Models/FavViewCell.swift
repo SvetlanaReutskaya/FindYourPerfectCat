@@ -11,7 +11,6 @@ import UIKit
 class FavViewCell: UITableViewCell{
     
     @IBOutlet weak var breedImg: UIImageView!
-    
     @IBOutlet weak var breedInfo: UITextView!
     @IBOutlet weak var breedName: UILabel!
 }

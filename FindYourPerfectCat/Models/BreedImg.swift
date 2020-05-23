@@ -10,7 +10,6 @@ import UIKit
 
 struct BreedImg: Decodable {
     var url: String
-    
     var height: Int
     var width: Int
 }

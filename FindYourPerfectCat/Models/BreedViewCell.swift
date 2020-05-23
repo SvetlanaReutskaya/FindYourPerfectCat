@@ -9,7 +9,6 @@
 import UIKit
 
 class BreedViewCell: UITableViewCell {
-    
     @IBOutlet weak var breedDescription: UITextView!
     @IBOutlet weak var breedName: UILabel!
 }
